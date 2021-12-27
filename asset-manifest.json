@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/drag-drop-pet/static/css/main.3f762f83.chunk.css",
+    "main.js": "/drag-drop-pet/static/js/main.42fdb698.chunk.js",
+    "main.js.map": "/drag-drop-pet/static/js/main.42fdb698.chunk.js.map",
+    "runtime-main.js": "/drag-drop-pet/static/js/runtime-main.8f450a1b.js",
+    "runtime-main.js.map": "/drag-drop-pet/static/js/runtime-main.8f450a1b.js.map",
+    "static/js/2.ab6c15fa.chunk.js": "/drag-drop-pet/static/js/2.ab6c15fa.chunk.js",
+    "static/js/2.ab6c15fa.chunk.js.map": "/drag-drop-pet/static/js/2.ab6c15fa.chunk.js.map",
+    "index.html": "/drag-drop-pet/index.html",
+    "static/css/main.3f762f83.chunk.css.map": "/drag-drop-pet/static/css/main.3f762f83.chunk.css.map",
+    "static/js/2.ab6c15fa.chunk.js.LICENSE.txt": "/drag-drop-pet/static/js/2.ab6c15fa.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/drag-drop-pet/static/media/bg.645c7041.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f450a1b.js",
+    "static/js/2.ab6c15fa.chunk.js",
+    "static/css/main.3f762f83.chunk.css",
+    "static/js/main.42fdb698.chunk.js"
+  ]
+}
