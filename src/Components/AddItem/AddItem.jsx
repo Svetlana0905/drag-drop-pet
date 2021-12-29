@@ -29,7 +29,7 @@ export const AddItem = (props) => {
                   <input type="text" value={room} required onChange={getRoom} />
                </label>
             </div>
-            <button type="submit" >Добавить </button>
+            <button type="submit">Добавить</button>
          </form>
       </div>
    )

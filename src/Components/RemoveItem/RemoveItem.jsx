@@ -12,8 +12,7 @@ export const RemoveItem = (props) => {
          <h3>Удалить</h3>
          <form name='remove' className='wrap' onClick={clickHandler}>
             <label className='label'><span className={styleError}>{textError}</span>
-               {/* <span className='label-title'>{textError}</span> */}
-               <input type="text" value={articul} required onChange={getArticul} />
+               <input type="text" value={articul} onChange={getArticul} />
             </label>
             <button type="submit" >Удалить</button>
          </form>

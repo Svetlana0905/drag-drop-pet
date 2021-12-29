@@ -12,10 +12,6 @@ export const SearchItem = () => {
    const [styleError, setStyleError] = useState('label-title')
    const [resultSearch, setResultSearch] = useState({})
 
-   function closeSerch() {
-      setStyleSearch('hidden')
-      console.log(styleSearch)
-   }
 
    function getArticul(event) {
       setArticul(event.target.value)
@@ -23,9 +19,10 @@ export const SearchItem = () => {
 
    function clickHandler(e) {
       e.preventDefault();
-      setTextSearch('Введите корректный артикул');
-      setStyleError('label-title error');
-      setStyleSearch('hidden')
+      if (!e.target.classList.contains('close-btn')) {
+         setTextSearch('Введите корректный артикул');
+         setStyleError('label-title error');
+      }
       arrItem.map((item, id) => item.items.forEach(el => {
          if (el['articul'] === articul) {
             setResultSearch({
@@ -39,6 +36,10 @@ export const SearchItem = () => {
          }
       }));
       setArticul('')
+   }
+
+   function closeSerch() {
+      setStyleSearch('hidden')
    }
 
    const data = {

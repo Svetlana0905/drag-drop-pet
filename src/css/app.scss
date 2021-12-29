@@ -71,7 +71,9 @@ button {
   -moz-box-shadow: $shadow20;
   box-shadow: $shadow20;
   transition: all 0.5s ease-in;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     -webkit-box-shadow: $shadow50;
     -moz-box-shadow: $shadow50;
     box-shadow: $shadow50;
@@ -158,6 +160,13 @@ button {
   padding: 15px;
   position: relative;
   cursor: grab;
+  &:hover,
+  &:focus-visible {
+    -webkit-box-shadow: $shadow50;
+    -moz-box-shadow: $shadow50;
+    box-shadow: $shadow50;
+    transition: all 0.5s ease-in;
+  }
   &__title {
     margin-bottom: 10px;
     color: $red;
@@ -233,6 +242,7 @@ button {
     margin-bottom: 15px;
   }
   &__select {
+    margin-bottom: 10px;
     padding: 10px 5px;
     font-size: 1.1rem;
     border: 1px solid $dark50;

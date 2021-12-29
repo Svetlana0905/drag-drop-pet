@@ -11,31 +11,27 @@ export const MovingMobile = () => {
    const [stylePopup, setStylePopup] = useState('hidden')
    const [articul, setArticul] = useState('')
    const [currentBoard, setCurrentBoard] = useState(null) // доска КУДА выбор через select
-   const [boardFrom, setBoardFrom] = useState()
-   const [itemId, setItemId] = useState()
-   const [fulItem, setFulItem] = useState({})
+
 
    function getCurrentBoard(e) {
       setCurrentBoard(+e.target.value + 1)
    }
 
-   function OpenPopup(e, articul, board, item, indexItem) {
+   function OpenPopup(e, articul) {
       setArticul(articul)
-      setBoardFrom(board)
-      setItemId(indexItem)
-      setFulItem(item)
+      console.log(currentBoard)
       if (!e.target.classList.contains('item__btn')) {
          setStylePopup('popup-block active-moving')
       }
    }
 
-   function ClickHandler() {
+   function ClickHandler(e, board, item, indexItem) {
       if (currentBoard !== null) {
          const data = {
-            'boardFrom': boardFrom.id,
+            'boardFrom': board.id,
             'boardTo': currentBoard,
-            'item': fulItem,
-            'itemId': itemId,
+            'item': item,
+            'itemId': indexItem,
          }
          dispath(movingItem(data))
          setStylePopup('hidden')
@@ -56,7 +52,6 @@ export const MovingMobile = () => {
       'closePopup': ClosePopup,
       'style': stylePopup,
       'getCurrentBoard': getCurrentBoard,
-      'ClickHandler': ClickHandler,
    }
 
    return (
@@ -73,11 +68,12 @@ export const MovingMobile = () => {
                      {board.items.map((item, indexItem) =>
                         <div key={item.articul}
                            className='item'
-                           onClick={e => OpenPopup(e, item.articul, board, item, indexItem)}
+                           onClick={e => OpenPopup(e, item.articul)}
                         >
                            <p className='item__title'><i>Артикул:</i></p>
                            <p className='item__articul'>{item.articul}</p>
                            <p className='item__image'><img className='item__img' src={item.icon} alt={item.name} /></p>
+                           <button className='item__btn' onClick={e => ClickHandler(e, board, item, indexItem)}>Переместить</button>
                         </div>
                      )}
                   </div>

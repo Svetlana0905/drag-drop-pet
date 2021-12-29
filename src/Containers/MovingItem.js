@@ -61,6 +61,7 @@ export const MovingItem = () => {
                   <div className='inner'>
                      {board.items.map(item =>
                         <div key={item.articul}
+                           tabIndex="0"
                            className='item'
                            draggable={true}
                            onDragOver={e => dragOverHandler(e)}
