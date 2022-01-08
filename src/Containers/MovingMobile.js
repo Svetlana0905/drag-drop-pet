@@ -10,7 +10,7 @@ export const MovingMobile = () => {
    const [boards, setBoards] = useState(arrItem)
    const [stylePopup, setStylePopup] = useState('hidden')
    const [articul, setArticul] = useState('')
-   const [currentBoard, setCurrentBoard] = useState(null) // доска КУДА выбор через select
+   const [currentBoard, setCurrentBoard] = useState(1) // доска КУДА выбор через select
    const [boardFrom, setBoardFrom] = useState()
    const [itemId, setItemId] = useState()
    const [fulItem, setFulItem] = useState({})
@@ -30,16 +30,14 @@ export const MovingMobile = () => {
    }
 
    function ClickHandler() {
-      if (currentBoard !== null) {
-         const data = {
-            'boardFrom': boardFrom.id,
-            'boardTo': currentBoard,
-            'item': fulItem,
-            'itemId': itemId,
-         }
-         dispath(movingItem(data))
-         setStylePopup('hidden')
+      const data = {
+         'boardFrom': boardFrom.id,
+         'boardTo': currentBoard,
+         'item': fulItem,
+         'itemId': itemId,
       }
+      dispath(movingItem(data))
+      setStylePopup('hidden')
    }
 
    function ClosePopup() {
@@ -48,7 +46,6 @@ export const MovingMobile = () => {
    useEffect(() => {
       setBoards(arrItem);
    }, [arrItem]);
-
 
    const data = {
       'articul': articul,

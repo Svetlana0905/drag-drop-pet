@@ -33,10 +33,10 @@ export const AddListItem = () => {
 
    }
    function getIcon(name) {
-      if (name === 'стол') setIconPath(table)
-      if (name === 'стул') setIconPath(chair)
-      if (name === 'лампа') setIconPath(lamp)
-      if (name === 'шкаф') setIconPath(closet)
+      if (name === 'стол') setIconPath(table);
+      if (name === 'стул') setIconPath(chair);
+      if (name === 'лампа') setIconPath(lamp);
+      if (name === 'шкаф') setIconPath(closet);
    }
    const newItem = {
       'articul': articul,
@@ -48,6 +48,10 @@ export const AddListItem = () => {
    function clickHandler(e) {
       e.preventDefault();
       dispath(plusItem(newItem))
+      setArticul('')
+      setName('')
+      setColor('')
+      setRoom('')
 
    }
    const data = {

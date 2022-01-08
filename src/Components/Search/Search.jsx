@@ -15,7 +15,7 @@ export const Search = (props) => {
          <h3>Найти</h3>
          <form name='search' className='wrap' onClick={clickHandler}>
             <label className='label'><span className={styleError}>{textSearch}</span>
-               <input type="text" value={articul} onChange={getArticul} />
+               <input type="search" value={articul} onChange={getArticul} />
             </label>
             <div className={styleSearch}>
                <button className='close-btn' onClick={closeSerch}>X</button>
