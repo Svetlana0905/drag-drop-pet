@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/drag-drop-pet/static/css/main.58d283f1.chunk.css",
-    "main.js": "/drag-drop-pet/static/js/main.455b2a0c.chunk.js",
-    "main.js.map": "/drag-drop-pet/static/js/main.455b2a0c.chunk.js.map",
+    "main.js": "/drag-drop-pet/static/js/main.2ee04bea.chunk.js",
+    "main.js.map": "/drag-drop-pet/static/js/main.2ee04bea.chunk.js.map",
     "runtime-main.js": "/drag-drop-pet/static/js/runtime-main.8f450a1b.js",
     "runtime-main.js.map": "/drag-drop-pet/static/js/runtime-main.8f450a1b.js.map",
     "static/js/2.ab6c15fa.chunk.js": "/drag-drop-pet/static/js/2.ab6c15fa.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.8f450a1b.js",
     "static/js/2.ab6c15fa.chunk.js",
     "static/css/main.58d283f1.chunk.css",
-    "static/js/main.455b2a0c.chunk.js"
+    "static/js/main.2ee04bea.chunk.js"
   ]
 }
